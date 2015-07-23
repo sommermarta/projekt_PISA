@@ -1,0 +1,10 @@
+install.packages("sysfonts")
+library(sysfonts)
+download.file("http://simonsoftware.se/other/xkcd.ttf", dest="xkcd.ttf", mode="wb")
+font.paths()
+system("mkdir ~/.fonts")
+system("cp xkcd.tff -t ~/.fonts")
+font.files()
+font.add("xkcd", regular = "xkcd.ttf")
+font.families()
+
